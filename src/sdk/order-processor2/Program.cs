@@ -5,7 +5,7 @@ using Dapr.Client;
 //run with: PS C:\Git\DaprPlayground\src\sdk\order-processor2> dapr run --app-id order-processor --resources-path ../../../components --app-port 7007 -- dotnet run
 //NOTE: --app-id has to be identical with other worker tasks, so they use the same queue, otherwise the get separate queues! 
 
-const string DAPR_STORE_NAME = "statestore";
+const string DAPR_STORE_NAME = "statestoreSQL";
 var builder = WebApplication.CreateBuilder(args);
 var client = new DaprClientBuilder().Build();
 var app = builder.Build();

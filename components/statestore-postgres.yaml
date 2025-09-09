@@ -1,0 +1,14 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestoreSQL
+spec:
+  type: state.postgresql
+  version: v1
+  metadata:
+  - name: connectionString
+    value: "host=localhost user=postgres password=secret dbname=dapr port=5432 sslmode=disable"
+  - name: tableName
+    value: "dapr_state"
+  - name: schema
+    value: "public"
